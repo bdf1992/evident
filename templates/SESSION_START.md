@@ -3,6 +3,8 @@
 - Protocol version:
 - Start time:
 - Participant representation:
+- Operator representation:
+- Operator/participant relationship: independent / same-actor / assisted / delegated / other / unknown
 - Purpose:
 - Space in scope:
 - Parent/federated space:

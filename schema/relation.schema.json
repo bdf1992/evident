@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evident 30 Relation",
+  "type": "object",
+  "required": ["id", "subject", "relation", "object", "scope", "state", "provenance"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "subject": {"type": "string", "minLength": 1},
+    "relation": {"type": "string", "minLength": 1},
+    "object": {"type": "string", "minLength": 1},
+    "scope": {"type": "string", "minLength": 1},
+    "state": {"enum": ["registered", "declared", "documented", "observed", "inferred", "verified", "contested", "unknown"]},
+    "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "perspective": {"type": ["string", "null"]},
+    "valid_from": {"type": ["string", "null"]},
+    "valid_to": {"type": ["string", "null"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "qualifiers": {"type": "object"},
+    "routing_safe": {"type": ["boolean", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

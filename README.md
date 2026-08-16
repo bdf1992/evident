@@ -23,6 +23,14 @@ A session is a first-class evidence object. It has a start/end, purpose, partici
 
 The organization model is therefore built from a **federation of attributable sessions**, not from one omniscient questionnaire run.
 
+## Discovery, not form completion
+
+Evident starts from work rather than title. A good session discovers what enters a participant's world, what changes, which systems and actors mediate the work, where authority and accountability sit, what fails, what crosses boundaries, and where routing should stop.
+
+The operator does not need to encode every possible organizational concept in advance. Instead it uses a compact discovery grammar and chooses probes that resolve consequential uncertainty.
+
+See [`protocol/DISCOVERY_PLAYBOOK.md`](protocol/DISCOVERY_PLAYBOOK.md) for the discovery scan, probe-priority heuristic, claim-neighbor branching, and interview recovery path. See [`protocol/WORKED_CASES.md`](protocol/WORKED_CASES.md) for contrasting behavioral examples across a team member, an AI session operator, a founder, and a federation.
+
 ## The 30-minute contract
 
 The wall-clock investigation budget is hard.
@@ -46,9 +54,17 @@ Each prediction records the predicted relation/fact, scope, basis, confidence, w
 
 This prevents hindsight: the final placement can show what the model got right, what the participant corrected, and what evidence changed.
 
+## Relations as organizational data
+
+Important organizational relations should not exist only inside prose. `schema/relation.schema.json` provides a canonical optional shape with:
+
+`subject -> relation -> object`, plus scope, evidence state, provenance, perspective, valid time, qualifiers, and routing safety.
+
+This lets later sessions federate, challenge, specialize, or supersede relations without reinterpreting natural-language summaries.
+
 ## Trust and shareability
 
-Every sealed session contains `session.json`, `prediction.jsonl`, `facts.jsonl`, `challenges.jsonl`, human-readable organization/participant views, unknowns/handoff, `manifest.json`, and `receipt.json`.
+Every sealed session contains `session.json`, `prediction.jsonl`, `facts.jsonl`, `challenges.jsonl`, human-readable organization/participant views, unknowns/handoff, `manifest.json`, and `receipt.json`. Sessions may additionally contain `relations.jsonl` using the canonical relation schema.
 
 `tools/seal_session.py` generates the manifest/receipt. `tools/verify_session.py` verifies hashes later. Cryptographic signatures can be layered on top, but the base protocol requires no secret key to be inspectable.
 
@@ -62,13 +78,16 @@ Never silently turn prediction, inference, title, authorship, access, or activit
 
 ## Start here
 
-- [`SKILL.md`](SKILL.md) — agent/session procedure
+- [`SKILL.md`](SKILL.md) — compressed agent/session procedure
+- [`protocol/DISCOVERY_PLAYBOOK.md`](protocol/DISCOVERY_PLAYBOOK.md) — how to investigate an unfamiliar organization
+- [`protocol/WORKED_CASES.md`](protocol/WORKED_CASES.md) — contrasting worked-case guidance
 - [`GUIDE_FRONTIER_MODELS.md`](GUIDE_FRONTIER_MODELS.md) — running with frontier models
 - [`CONSTITUTION.md`](CONSTITUTION.md) — invariants
 - [`protocol/EVIDENCE_POLICY.md`](protocol/EVIDENCE_POLICY.md) — evidence rules
 - [`protocol/30_MINUTE_PROTOCOL.md`](protocol/30_MINUTE_PROTOCOL.md) — time budget
 - [`protocol/TRUST_RECEIPT.md`](protocol/TRUST_RECEIPT.md) — trust/shareability contract
-- [`tests/first-smoke/REVIEW.md`](tests/first-smoke/REVIEW.md) — synthetic smoke session
+- [`schema/relation.schema.json`](schema/relation.schema.json) — canonical machine-readable organizational relation
+- [`tests/first-smoke/REVIEW.md`](tests/first-smoke/REVIEW.md) — synthetic structural smoke session
 
 ## Safety / privacy
 
