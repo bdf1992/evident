@@ -1,0 +1,13 @@
+# Session Start
+- Session ID:
+- Protocol version:
+- Start time:
+- Participant representation:
+- Purpose:
+- Space in scope:
+- Parent/federated space:
+- Prior session receipts:
+- Allowed evidence sources:
+- Explicitly excluded sources:
+- Sensitive handling constraints:
+- External timer used: yes/no

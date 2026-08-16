@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evident 30 Session Receipt",
+  "type": "object",
+  "required": ["session_id", "protocol_version", "start", "end", "duration_minutes", "status", "scope", "sources_allowed", "sources_inspected"],
+  "properties": {
+    "session_id": {"type": "string"},
+    "protocol_version": {"type": "string"},
+    "start": {"type": "string"},
+    "end": {"type": "string"},
+    "duration_minutes": {"type": "number", "minimum": 0},
+    "status": {"enum": ["complete", "partial", "late"]},
+    "scope": {"type": "string"},
+    "purpose": {"type": ["string", "null"]},
+    "participant": {"type": ["string", "null"]},
+    "model": {"type": ["string", "null"]},
+    "prior_session_receipts": {"type": "array", "items": {"type": "string"}},
+    "sources_allowed": {"type": "array", "items": {"type": "string"}},
+    "sources_inspected": {"type": "array", "items": {"type": "string"}},
+    "excluded_sources": {"type": "array", "items": {"type": "string"}},
+    "prediction_frozen_at": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

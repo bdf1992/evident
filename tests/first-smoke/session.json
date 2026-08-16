@@ -1,0 +1,18 @@
+{
+  "session_id": "first-smoke",
+  "start": "2026-08-16T06:29:01Z",
+  "end": "2026-08-16T06:29:08Z",
+  "duration_minutes": 0.12,
+  "status": "complete",
+  "scope": "Fictional MRF Lake Region Office / Supply Cell",
+  "participant": "Chen (fictional)",
+  "model": "GPT-5.6 Sol author smoke test",
+  "sources_inspected": ["fixtures/synthetic-federation/evidence/org-chart.md","fixtures/synthetic-federation/evidence/procurement-policy.md","fixtures/synthetic-federation/evidence/supply-runbook.md","fixtures/synthetic-federation/evidence/ticket-sample.md","tests/first-smoke/INPUT.md"],
+  "excluded_sources": [],
+  "notes": "Synthetic author smoke test using prewritten fixture and synthetic participant answers; wall-clock measured for this rerun. Not a blind independent-model evaluation.",
+  "protocol_version": "0.2.0",
+  "purpose": "Place Chen for future routing of Supply Cell work without confusing operational knowledge with procurement authority.",
+  "sources_allowed": ["fixtures/synthetic-federation/evidence/"],
+  "prior_session_receipts": [],
+  "prediction_frozen_at": "2026-08-16T06:29:02Z"
+}

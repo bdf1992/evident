@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evident 30 Fact",
+  "type": "object",
+  "required": ["id", "statement", "scope", "state", "provenance"],
+  "properties": {
+    "id": {"type": "string"},
+    "statement": {"type": "string", "minLength": 1},
+    "scope": {"type": "string", "minLength": 1},
+    "state": {"enum": ["registered", "declared", "documented", "observed", "inferred", "verified", "contested", "unknown"]},
+    "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "as_of": {"type": ["string", "null"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "perspective": {"type": ["string", "null"]},
+    "challenges": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

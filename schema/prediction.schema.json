@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evident 30 Pre-interview Prediction",
+  "type": "object",
+  "required": ["id", "statement", "scope", "basis", "confidence", "routing_safe", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "statement": {"type": "string"},
+    "scope": {"type": "string"},
+    "basis": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "routing_safe": {"type": "boolean"},
+    "update_condition": {"type": ["string", "null"]},
+    "status": {"enum": ["predicted", "supported", "narrowed", "contradicted", "unresolved", "not-tested"]},
+    "final_fact_ids": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}
