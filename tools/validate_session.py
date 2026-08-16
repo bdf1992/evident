@@ -27,6 +27,16 @@ for i,line in enumerate((d/'prediction.jsonl').read_text().splitlines(),1):
   for f in ('id','statement','scope','basis','confidence','routing_safe','status'):
    if f not in x: errors.append(f'prediction.jsonl:{i} missing {f}')
  except Exception as e: errors.append(f'prediction.jsonl:{i} invalid JSON: {e}')
+rp=d/'relations.jsonl'
+if rp.exists():
+ for i,line in enumerate(rp.read_text().splitlines(),1):
+  if not line.strip(): continue
+  try:
+   x=json.loads(line)
+   for f in ('id','subject','relation','object','scope','state','provenance'):
+    if f not in x: errors.append(f'relations.jsonl:{i} missing {f}')
+   if x.get('state') not in STATES: errors.append(f'relations.jsonl:{i} invalid state')
+  except Exception as e: errors.append(f'relations.jsonl:{i} invalid JSON: {e}')
 if errors:
  print('FAIL'); [print('-',e) for e in errors]; sys.exit(1)
 print('PASS')
