@@ -13,6 +13,8 @@
     "scope": {"type": "string"},
     "purpose": {"type": ["string", "null"]},
     "participant": {"type": ["string", "null"]},
+    "operator": {"type": ["string", "null"]},
+    "operator_participant_relationship": {"enum": ["independent", "same-actor", "assisted", "delegated", "other", "unknown", null]},
     "model": {"type": ["string", "null"]},
     "prior_session_receipts": {"type": "array", "items": {"type": "string"}},
     "sources_allowed": {"type": "array", "items": {"type": "string"}},
