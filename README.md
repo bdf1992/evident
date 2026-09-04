@@ -2,7 +2,10 @@
 
 **A 30-minute, session-based, AI-native organizational bootstrap instrument.**
 
-Evident 30 is not a fixed questionnaire and not a personality test. Each **session** is a bounded attempt by a frontier model to understand part of an organizational space and place a participant within it for future recognition and routing.
+Evident 30 is not a questionnaire and not a personality test. Each **session**
+is one bounded attempt by a model to understand part of an organization and
+place a person within it, so later work can be routed to whoever it actually
+belongs to.
 
 A session must:
 
