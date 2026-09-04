@@ -95,3 +95,17 @@ Never silently turn prediction, inference, title, authorship, access, or activit
 ## Safety / privacy
 
 The model inspects only sources deliberately put in scope. “Can access” is not “authorized to inspect.” A shareable session should prefer source references, hashes, and minimal extracts over copying sensitive source material.
+
+<!-- lineage:begin — generated from system-cartographer lineage/lineage.yaml. Do not hand-edit. -->
+
+## Where this sits
+
+This is one of 20 repositories on this account whose relations are recorded, with the evidence for each, in [`lineage.yaml`](https://github.com/bdf1992/system-cartographer/blob/claude/access-requirements-zbl1s7/lineage/lineage.yaml). What that record says about this one:
+
+**Claim.** A session-based instrument for bootstrapping how an organization works, in about thirty minutes.
+
+**Checked.** `python -m pytest -q` — 1 passed, observed 2026-09-04.
+
+**Relations.** None recorded, in either direction. 12 of the 20 repositories are unconnected; that absence is recorded rather than papered over with a plausible edge.
+
+<!-- lineage:end -->
